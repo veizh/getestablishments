@@ -49,7 +49,7 @@ function App() {
     const headers = {
       'Content-Type': 'application/json',
       'X-Goog-Api-Key': API_KEY,
-      'X-Goog-FieldMask': 'places.displayName,places.servesBeer,places.goodForWatchingSports,places.servesVegetarianFood,places.servesCocktails,places.outdoorSeating,places.rating,places.formattedAddress,places.nationalPhoneNumber,places.priceLevel'
+      'X-Goog-FieldMask': 'places.regularOpeningHours,places.displayName,places.servesBeer,places.goodForWatchingSports,places.servesVegetarianFood,places.servesCocktails,places.outdoorSeating,places.rating,places.formattedAddress,places.nationalPhoneNumber,places.priceLevel'
     };
     
     // Configuration de la requête
