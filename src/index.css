@@ -1,13 +1,86 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+padding: 0;
+box-sizing: border-box;
+background-color: rgb(37, 37, 37);
 }
+.containerform{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100vw;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 40px;
+  gap: 20px;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+}
+dialog[open]{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+  border: none;
+  background-color: #351925;
+}
+dialog button{
+  background-color: white;
+  color: #943860;
+  font-weight: 700;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+dialog::backdrop{
+  background-color: #3a1e2a93;
+  width: 100vw;
+  height: 100vh;
+}
+h1{
+  color: whitesmoke;
+  font-weight: bold;
+  padding: 3px ;
+  border-top: 2px solid #943860;
+  border-bottom: 2px solid #943860;
+}
+.sub{
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+.containerform p{
+  
+  font-size: 24px;
+  color: #943860;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.containerform input{
+  all: unset;
+  font-size: 22px;
+  height: 40px;
+  padding: 4px 8px;
+  background-color: whitesmoke;
+}
+.bigcontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  flex-direction: column;
+  height: 100vh;
+}
+button{
+  all: unset;
+  background-color: #943860;
+  color: whitesmoke;
+  font-size: 28px;
+  padding: 5px 15px 8px 15px;
+  cursor: pointer;
+  
+}
+button:hover{
+  filter: brightness(1.3);
 }
