@@ -45,7 +45,7 @@ const AddBdd = ()=>{
           };
           
           // URL de votre endpoint pour créer des objets MongoDB
-          const url = 'https://bars-back-end.vercel.app/bar/PushOne';
+          const url = 'https://bars-back-4yt87lcux-veizhs-projects.vercel.app/bar/PushOne';
           
 
           fetch(url, requestOptions)
