@@ -36,11 +36,9 @@ const AddBdd = ()=>{
         console.log(objectToPush);
 
         const requestOptions = {
-            method: 'POST', // Méthode HTTP
+            method: 'POST', 
             headers: {
-              'Origin': 'https://getestablishments.vercel.app', // L'origine de votre demande
-              'Content-Type': 'application/json', // Le type de contenu que vous envoyez, si applicable
-              // D'autres en-têtes requis par le serveur, le cas échéant
+              'Content-Type':'application/json', 
             },
             body: JSON.stringify(objectToPush) // Convertir les données en JSON pour les envoyer au serveur
           };
