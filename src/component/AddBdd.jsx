@@ -38,6 +38,7 @@ const AddBdd = ()=>{
         const requestOptions = {
             method: 'POST', // Méthode HTTP
             headers: {
+              'Access-Control-Allow-Origin': '*',
               'Content-Type': 'application/json' // Type de contenu des données
               // Vous pouvez ajouter d'autres en-têtes selon les besoins, par exemple, les jetons d'authentification
             },
