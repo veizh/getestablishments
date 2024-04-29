@@ -1,7 +1,10 @@
-body {
+*{
+  
   margin: 0;
 padding: 0;
 box-sizing: border-box;
+}
+body {
 background-color: rgb(37, 37, 37);
 }
 .containerform{
@@ -16,14 +19,27 @@ background-color: rgb(37, 37, 37);
   gap: 20px;
 
 }
-dialog[open]{
+.thrash{
+  z-index: 4;
+  cursor: pointer;
+}
+.row{
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  padding: 20px;
-  border: none;
-  background-color: #351925;
+  justify-content: space-between;
+}
+dialog[open]{
+  transform: translate(-50%,-50%);
+    position: fixed;
+    display: flex;
+    top: 50%;
+    flex-direction: column;
+    align-items: center;
+    left: 50%;
+    gap: 40px;
+    padding: 45px;
+    border: none;
+    background-color: #351925;
 }
 dialog button{
   background-color: white;
@@ -33,8 +49,23 @@ dialog button{
   gap: 5px;
   align-items: center;
 }
+dialog input{
+  border: none;
+  padding: 5px;
+  background-color: white;
+  color: #943860;
+  font-size: 22px;
+  width: 100%;
+  font-weight: 700;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+dialog input:focus-visible{
+  outline: unset;
+}
 dialog::backdrop{
-  background-color: #3a1e2a93;
+  background-color: #00000093;
   width: 100vw;
   height: 100vh;
 }
@@ -83,4 +114,92 @@ button{
 }
 button:hover{
   filter: brightness(1.3);
+}
+.main__container__push{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  width: 100vw;
+  padding: 25px 0;
+  max-width: 1250px;
+  background-color: #351925;
+  color: whitesmoke;
+  font-size: 22px;
+
+}
+.main__container__push ul{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 10px;
+  width: 100%;
+}
+.main__container__push li p{
+  
+  padding:8px 10px;
+  border-radius: 15px;
+  background-color: gray;
+}
+.notif__container{
+  position: fixed;
+  bottom: 20px;
+  right:  20px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+  width: 500px;
+}
+.notif__container div{
+  border-radius: 15px;
+  width: 100%;
+  padding: 25px 25px ;
+  background-color: #943860;
+  animation: fadeout 5.5s ease-in-out forwards;
+  
+}
+.notif__container div p{
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(20, 20, 20);
+}
+.main__container__push li{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+  justify-content: space-between;
+  font-size: 22px;
+  border-radius: 15px;
+  width: 100%;
+  color: whitesmoke;
+}
+.main__container__push li p:hover{
+cursor: pointer;
+filter: brightness(1.4);
+}
+.main__container__push li svg{
+  cursor: pointer;
+}
+.main__container__push li svg:hover{
+  stroke: #943860;
+}
+@keyframes fadeout {
+  0%{
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  10%{
+    transform: translateY(0);
+  }
+  80%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
 }
