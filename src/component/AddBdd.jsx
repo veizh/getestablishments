@@ -69,9 +69,6 @@ const AddBdd = ()=>{
         setCurrentElement()
         
     }
-    useEffect(()=>{
-      fetch('https://bars-back-end.vercel.app/bar/get',{method:"GET"})
-    })
     return(
         <>
         <div className="notif__container" ref={notif}>
