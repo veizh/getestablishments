@@ -39,7 +39,7 @@ const AddBdd = ()=>{
             method: 'POST', 
             headers: {
               'Content-Type':'application/json', 
-              "Accept":"*"
+              
             },
             body: JSON.stringify(objectToPush) // Convertir les données en JSON pour les envoyer au serveur
           };
@@ -73,6 +73,9 @@ const AddBdd = ()=>{
         setCurrentElement()
         
     }
+    useEffect(()=>{
+      fetch('https://bars-back-end.vercel.app/bar/get',{method:"GET"})
+    })
     return(
         <>
         <div className="notif__container" ref={notif}>
