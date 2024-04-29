@@ -35,9 +35,6 @@ const AddBdd = ()=>{
         objectToPush.priceLevel=tmp.priceLevel
         console.log(objectToPush);
 
-        const requestOptions = 
-          
-          
 
           fetch('https://bars-back-end.vercel.app/bar/pushone', {
             method:'POST', 
