@@ -164,7 +164,6 @@ gap: 10px;
   font-size: 28px;
   font-weight: bold;
   color: rgb(235, 235, 235);
-  flex: 1;
 }
 .main__container__push li{
   list-style: none;
@@ -184,6 +183,10 @@ filter: brightness(1.4);
 }
 .main__container__push li svg{
   cursor: pointer;
+}
+.main__container__push  li p {
+  flex: 1;
+
 }
 .main__container__push li svg:hover{
   stroke: #943860;
