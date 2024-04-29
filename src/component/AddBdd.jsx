@@ -39,6 +39,7 @@ const AddBdd = ()=>{
             method: 'POST', 
             headers: {
               'Content-Type':'application/json', 
+              "Accept":"*"
             },
             body: JSON.stringify(objectToPush) // Convertir les données en JSON pour les envoyer au serveur
           };
