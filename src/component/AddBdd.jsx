@@ -24,7 +24,7 @@ const AddBdd = ()=>{
         
         let objectToPush ={}
         objectToPush.name=tmp.displayName.text
-        objectToPush.adress=tmp.formattedAddress
+        objectToPush.address=tmp.formattedAddress
         objectToPush.rating=tmp.rating
         objectToPush.urlImg=tmp.urlImg
         objectToPush.servesBeer=tmp.servesBeer
@@ -35,15 +35,16 @@ const AddBdd = ()=>{
         objectToPush.priceLevel=tmp.priceLevel
         console.log(objectToPush);
 
-
-          fetch('https://bars-back-end.vercel.app/bar/pushone', {
-            method:'POST', 
+        const requestOptions = {
+            method: 'POST', 
             headers: {
-              'Content-Type':'application/json', 
-              
-            },
+              'Content-Type':'application/json' },
             body: JSON.stringify(objectToPush) // Convertir les données en JSON pour les envoyer au serveur
-          })
+          };
+          
+          
+
+          fetch('https://bars-back-end.vercel.app/bar/pushone', requestOptions)
             .then(response => {
               if (!response.ok) {
                 throw new Error('Erreur lors de la requête');
