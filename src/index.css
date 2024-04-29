@@ -142,7 +142,7 @@ button:hover{
   
   padding:8px 10px;
   border-radius: 15px;
-  background-color: gray;
+  background-color: rgb(35, 16, 39);
 }
 .notif__container{
   position: fixed;
@@ -157,14 +157,14 @@ gap: 10px;
   border-radius: 15px;
   width: 100%;
   padding: 25px 25px ;
-  background-color: #943860;
   animation: fadeout 5.5s ease-in-out forwards;
   
 }
 .notif__container div p{
   font-size: 28px;
   font-weight: bold;
-  color: rgb(20, 20, 20);
+  color: rgb(235, 235, 235);
+  flex: 1;
 }
 .main__container__push li{
   list-style: none;
