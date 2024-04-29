@@ -35,20 +35,18 @@ const AddBdd = ()=>{
         objectToPush.priceLevel=tmp.priceLevel
         console.log(objectToPush);
 
-        const requestOptions = {
-            method: 'POST', 
+        const requestOptions = 
+          
+          
+
+          fetch('https://bars-back-end.vercel.app/bar/pushone', {
+            method:'POST', 
             headers: {
               'Content-Type':'application/json', 
               
             },
             body: JSON.stringify(objectToPush) // Convertir les données en JSON pour les envoyer au serveur
-          };
-          
-          // URL de votre endpoint pour créer des objets MongoDB
-          const url = 'https://bars-back-end.vercel.app/bar/pushone';
-          
-
-          fetch(url, requestOptions)
+          })
             .then(response => {
               if (!response.ok) {
                 throw new Error('Erreur lors de la requête');
